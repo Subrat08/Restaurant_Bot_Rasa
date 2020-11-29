@@ -1,0 +1,1187 @@
+version: "2.0"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: mumbai
+    - location: mumbai
+  - slot_was_set:
+    - location: mumbai
+  - action: action_valid_location
+  - slot_was_set:
+    - location: mumbai
+  - slot_was_set:
+    - location_cat: tier1
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Mexican
+    - cuisine: Mexican
+  - slot_was_set:
+    - cuisine: Mexican
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - slot_was_set:
+    - cuisine: null
+  - slot_was_set:
+    - budget: null
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+  - slot_was_set:
+    - budget: More than 700
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: mexican
+  - slot_was_set:
+    - cuisine: mexican
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+    entities:
+    - email: abc1234@xyz.com
+  - slot_was_set:
+    - email: abc1234@xyz.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bangalore
+    - location: bangalore
+  - slot_was_set:
+    - location: bangalore
+  - action: action_valid_location
+  - slot_was_set:
+    - location: bangalore
+  - slot_was_set:
+    - location_cat: tier1
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: South Indian
+    - cuisine: South Indian
+  - slot_was_set:
+    - cuisine: South Indian
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: kolkata
+  - slot_was_set:
+    - location: kolkata
+  - action: action_valid_location
+  - slot_was_set:
+    - location: kolkata
+  - slot_was_set:
+    - location_cat: tier1
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: American
+  - slot_was_set:
+    - cuisine: American
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: bombei
+  - slot_was_set:
+    - location: bombei
+  - action: action_valid_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - location_cat: other
+  - action: utter_wrong_location
+  - intent: restaurant_search
+    entities:
+    - location: Mumbai
+  - slot_was_set:
+    - location: Mumbai
+  - action: action_valid_location
+  - slot_was_set:
+    - location: mumbai
+  - slot_was_set:
+    - location_cat: tier1
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: American
+  - slot_was_set:
+    - cuisine: American
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+    - location: chandigarh
+  - slot_was_set:
+    - cuisine: Chinese
+  - slot_was_set:
+    - location: chandigarh
+  - action: action_valid_location
+  - slot_was_set:
+    - location: chandigarh
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+  - slot_was_set:
+    - budget: More than 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: delhi
+  - slot_was_set:
+    - location: delhi
+  - action: action_valid_location
+  - slot_was_set:
+    - location: delhi
+  - slot_was_set:
+    - location_cat: tier1
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Italian
+  - slot_was_set:
+    - cuisine: Italian
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: punjab
+  - slot_was_set:
+    - location: punjab
+  - action: action_valid_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - location_cat: other
+  - action: utter_wrong_location
+  - intent: restaurant_search
+    entities:
+    - location: rishikesh
+  - slot_was_set:
+    - location: rishikesh
+  - action: action_valid_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - location_cat: tier3
+  - action: utter_unavailable
+  - intent: restaurant_search
+    entities:
+    - location: indore
+  - slot_was_set:
+    - location: indore
+  - action: action_valid_location
+  - slot_was_set:
+    - location: indore
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: South Indian
+  - slot_was_set:
+    - cuisine: South Indian
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: indore
+  - slot_was_set:
+    - location: indore
+  - action: action_valid_location
+  - slot_was_set:
+    - location: indore
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: South Indian
+  - slot_was_set:
+    - cuisine: South Indian
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: Gurgaon
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - slot_was_set:
+    - location: Gurgaon
+  - action: action_valid_location
+  - slot_was_set:
+    - location: gurgaon
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: american
+    - location: jaipur
+  - slot_was_set:
+    - cuisine: american
+  - slot_was_set:
+    - location: jaipur
+  - action: action_valid_location
+  - slot_was_set:
+    - location: jaipur
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: chennai
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - slot_was_set:
+    - location: chennai
+  - action: action_valid_location
+  - slot_was_set:
+    - location: chennai
+  - slot_was_set:
+    - location_cat: tier1
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+  - slot_was_set:
+    - budget: More than 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+    - location: delhi
+    - budget: Lesser than Rs 300
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - cuisine: Chinese
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - location: delhi
+  - action: action_valid_location
+  - slot_was_set:
+    - location: delhi
+  - slot_was_set:
+    - location_cat: tier1
+  - action: action_search_restaurants
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+  - slot_was_set:
+    - budget: More than 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Visakhapatnam
+  - slot_was_set:
+    - location: Visakhapatnam
+  - action: action_valid_location
+  - slot_was_set:
+    - location: visakhapatnam
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: restaurant_search
+    entities:
+    - email: chatfoodie@gmail.com
+  - slot_was_set:
+    - email: chatfoodie@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - location: nellore
+  - slot_was_set:
+    - location: nellore
+  - action: action_valid_location
+  - slot_was_set:
+    - location: nellore
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: South Indian
+  - slot_was_set:
+    - cuisine: South Indian
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: prayagraj
+  - slot_was_set:
+    - location: prayagraj
+  - action: action_valid_location
+  - slot_was_set:
+    - location: prayagraj
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: mexican
+  - slot_was_set:
+    - cuisine: mexican
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: example@internet.co.in
+  - slot_was_set:
+    - email: example@internet.co.in
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: Thiruvananthapuram
+  - slot_was_set:
+    - location: Thiruvananthapuram
+  - action: action_valid_location
+  - slot_was_set:
+    - location: thiruvananthapuram
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: American
+  - slot_was_set:
+    - cuisine: American
+  - action: action_search_restaurants
+  - slot_was_set:
+    - cuisine: null
+  - slot_was_set:
+    - budget: null
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+  - slot_was_set:
+    - budget: More than 700
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: mexican
+  - slot_was_set:
+    - cuisine: mexican
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+    entities:
+    - email: abc1234@xyz.com
+  - slot_was_set:
+    - email: abc1234@xyz.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: nanded
+  - slot_was_set:
+    - location: nanded
+  - action: action_valid_location
+  - slot_was_set:
+    - location: nanded
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: South Indian
+  - slot_was_set:
+    - cuisine: South Indian
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: gurgaon
+  - slot_was_set:
+    - location: gurgaon
+  - action: action_valid_location
+  - slot_was_set:
+    - location: gurgaon
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Mexican
+  - slot_was_set:
+    - cuisine: Mexican
+  - action: action_search_restaurants
+  - slot_was_set:
+    - cuisine: null
+  - slot_was_set:
+    - budget: null
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+  - slot_was_set:
+    - budget: More than 700
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: mexican
+  - slot_was_set:
+    - cuisine: mexican
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+    entities:
+    - email: abc1234@xyz.com
+  - slot_was_set:
+    - email: abc1234@xyz.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: chandigarh
+  - slot_was_set:
+    - location: chandigarh
+  - action: action_valid_location
+  - slot_was_set:
+    - location: chandigarh
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - action: action_search_restaurants
+  - slot_was_set:
+    - cuisine: null
+  - slot_was_set:
+    - budget: null
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+    - location: delhi
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - cuisine: Chinese
+  - slot_was_set:
+    - location: delhi
+  - action: action_valid_location
+  - slot_was_set:
+    - location: delhi
+  - slot_was_set:
+    - location_cat: tier1
+  - action: action_search_restaurants
+  - slot_was_set:
+    - cuisine: null
+  - slot_was_set:
+    - budget: null
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - action: action_search_restaurants
+  - slot_was_set:
+    - cuisine: null
+  - slot_was_set:
+    - budget: null
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+  - slot_was_set:
+    - budget: More than 700
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: jdkk.2jmd@kdl.co.in
+  - slot_was_set:
+    - email: jdkk.2jmd@kdl.co.in
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: South Indian
+  - slot_was_set:
+    - cuisine: South Indian
+  - action: utter_ask_location
+  - intent: restaurant_search
+    entities:
+    - location: firozabad
+  - slot_was_set:
+    - location: firozabad
+  - action: action_valid_location
+  - slot_was_set:
+    - location: firozabad
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: ssk@yahho.co.in
+  - slot_was_set:
+    - email: ssk@yahho.co.in
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - location: abu
+    - location: dhabi
+  - slot_was_set:
+    - location: dhabi
+  - action: action_valid_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - location_cat: tier3
+  - action: utter_unavailable
+  - intent: restaurant_search
+    entities:
+    - location: maldieves
+  - slot_was_set:
+    - location: maldieves
+  - action: action_valid_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - location_cat: other
+  - action: utter_wrong_location
+  - intent: restaurant_search
+    entities:
+    - location: pune
+  - slot_was_set:
+    - location: pune
+  - action: action_valid_location
+  - slot_was_set:
+    - location: pune
+  - slot_was_set:
+    - location_cat: tier1
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Mexican
+  - slot_was_set:
+    - cuisine: Mexican
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+  - slot_was_set:
+    - budget: More than 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subrat@gmail.co.in
+  - slot_was_set:
+    - email: subrat@gmail.co.in
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: North Indian
+    - location: meghalaya
+    - email: restaurants@zomzato.co.in
+    - budget: Lesser than 300
+  - slot_was_set:
+    - budget: Lesser than 300
+  - slot_was_set:
+    - cuisine: North Indian
+  - slot_was_set:
+    - email: restaurants@zomzato.co.in
+  - slot_was_set:
+    - location: meghalaya
+  - action: action_valid_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - location_cat: other
+  - action: utter_wrong_location
+  - intent: restaurant_search
+    entities:
+    - location: jammu
+  - slot_was_set:
+    - location: jammu
+  - action: action_valid_location
+  - slot_was_set:
+    - location: jammu
+  - slot_was_set:
+    - location_cat: tier2
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+    - cuisine: mexican
+    - location: rajgarh
+  - slot_was_set:
+    - budget: More than 700
+  - slot_was_set:
+    - cuisine: mexican
+  - slot_was_set:
+    - location: rajgarh
+  - action: action_valid_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - location_cat: other
+  - action: utter_wrong_location
+  - intent: restaurant_search
+    entities:
+    - location: bhilai
+  - slot_was_set:
+    - location: bhilai
+  - action: action_valid_location
+  - slot_was_set:
+    - location: bhilai
+  - slot_was_set:
+    - location_cat: tier2
+  - action: action_search_restaurants
+  - slot_was_set:
+    - cuisine: null
+  - slot_was_set:
+    - budget: null
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: sbc@abc.in
+  - slot_was_set:
+    - email: sbc@abc.in
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: restaurant_search
+    entities:
+    - cuisine: american
+    - location: hyderabad
+  - slot_was_set:
+    - cuisine: american
+  - slot_was_set:
+    - location: hyderabad
+  - action: action_valid_location
+  - slot_was_set:
+    - location: hyderabad
+  - slot_was_set:
+    - location_cat: tier1
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: demo@xyzemail.com
+  - slot_was_set:
+    - email: demo@xyzemail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+    - location: chandigarh
+  - slot_was_set:
+    - cuisine: Chinese
+  - slot_was_set:
+    - location: chandigarh
+  - action: action_valid_location
+  - slot_was_set:
+    - location: chandigarh
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs 300
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - action: action_search_restaurants
+  - slot_was_set:
+    - cuisine: null
+  - slot_was_set:
+    - budget: null
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - slot_was_set:
+    - budget: Rs 300 to 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+    entities:
+    - location: Rishikesh
+  - slot_was_set:
+    - location: Rishikesh
+  - action: action_valid_location
+  - slot_was_set:
+    - location: null
+  - slot_was_set:
+    - location_cat: tier3
+  - action: utter_unavailable
+  - intent: restaurant_search
+    entities:
+    - location: prayagraj
+  - slot_was_set:
+    - location: prayagraj
+  - action: action_valid_location
+  - slot_was_set:
+    - location: prayagraj
+  - slot_was_set:
+    - location_cat: tier2
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: Chinese
+  - slot_was_set:
+    - cuisine: Chinese
+  - action: utter_ask_budget
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+  - slot_was_set:
+    - budget: More than 700
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+    entities:
+    - email: xyz@sth.edu
+  - slot_was_set:
+    - email: xyz@sth.edu
+  - action: action_send_email
+  - action: utter_goodbye

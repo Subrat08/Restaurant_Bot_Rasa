@@ -1,0 +1,598 @@
+version: "2.0"
+nlu:
+- intent: affirm
+  examples: |
+    - yep
+    - yeah
+    - indeed
+    - that's right
+    - ok
+    - great
+    - right, thank you
+    - correct
+    - great choice
+    - sounds really good
+    - thanks
+    - thank you
+    - Ok
+    - Thanks
+    - thanks, you too
+- intent: restaurant_search
+  examples: |
+    - Rest
+    - i'm looking for a place to eat
+    - I want to grab lunch
+    - I am searching for a dinner spot
+    - I am looking for some restaurants in [Delhi](location).
+    - I am looking for some restaurants in [Bangalore]{"entity": "location", "value": "Bengaluru"}
+    - show me [chinese](cuisine) restaurants
+    - show me [chines]{"entity": "cuisine", "value": "Chinese"} restaurants in the [New Delhi]{"entity": "location", "value": "Delhi"}
+    - show me a [mexican](cuisine) place in the [centre](location)
+    - i am looking for an [indian](cuisine) spot called olaolaolaolaolaola
+    - search for restaurants
+    - anywhere in the [west](location)
+    - I am looking for [asian fusion](cuisine) food
+    - I am looking a restaurant in [294328](location)
+    - find me a restaurant in [delhi](location) with [chinese](cuisine) cuisine under [low](budget) budget
+    - in [Gurgaon](location)
+    - [Kormangala](location)
+    - [North Indian](cuisine) [North Indian](cuisine)
+    - [Italian](cuisine) [Italian](cuisine)
+    - [Chinese](cuisine) [Chinese](cuisine)
+    - [chinese](cuisine) [chinese](cuisine)
+    - [Lithuania](location)
+    - Oh, sorry, in [Italy](location)
+    - in [delhi](location)
+    - I am looking for some restaurants in [Mumbai](location)
+    - I am looking for [mexican indian fusion](cuisine)
+    - can you book a table in [rome](location) in a [moderate]{"entity": "budget", "value": "Rs 300 to 700"} price range with [british](cuisine) food for four people
+    - [central](location) [indian](cuisine) restaurant
+    - please help me to find restaurants in [pune](location)
+    - Please find me a restaurantin [bangalore]{"entity": "location", "value": "Bengaluru"}
+    - [mumbai](location)
+    - show me restaurants
+    - I would prefer [south indian]{"entity": "cuisine", "value": "South Indian"}
+    - please find me [chinese](cuisine) restaurant in [delhi](location)
+    - can you find me a [chinese](cuisine) restaurant
+    - [delhi](location)
+    - please find me a restaurant in [ahmedabad](location)
+    - please show me a few [italian](cuisine) restaurants in [bangalore]{"entity": "location", "value": "Bengaluru"}
+    - can you please find me a [italian](cuisine) restaurant in [mumbai](location)
+    - [punjab](location)
+    - [Chinese](cuisine)
+    - [Mexican](cuisine)[Mexican](cuisine)
+    - [Italian](cuisine)[Italian](cuisine)
+    - [American](cuisine)
+    - [South Indian](cuisine)
+    - [North Indian](cuisine)[North Indian](cuisine)
+    - find me a restaurant
+    - [jaipur](location)[jaipur](location)
+    - [Lesser than Rs 300](budget)
+    - [More than 700](budget)[More than 700](budget)
+    - [american](cuisine)[american](cuisine)
+    - I’ll prefer [South Indian](cuisine)
+    - I will prefer [North Indian](cuisine)
+    - I'd prefer [american](cuisine)
+    - find me a restaurant with low {"entity": "budget", "value": "Lesser than Rs 300"} budget in delhi(location) with chienese(cuisine) cuisine
+    - Im hungry. Looking out for some good restaurants
+    - [chennai](location)
+    - [South Indian](cuisine) [South Indian](cuisine)
+    - Im hungry. Looking out for some good [chinese](cuisine) [chinese](cuisine) restaurants in [chandigarh](location)
+    - Im hungry. Looking out for some good [chinese](cuisine) [chinese](cuisine) restaurants in [punjab](location)
+    - find me a restaurant with [chinese](cuisine) [chinese](cuisine) in [delhi](location) [delhi](location)
+    - find me a restaurant with [chinese](cuisine) [chinese](cuisine) cuisine in [delhi](location) [delhi](location)
+    - find me a restaurant in [delhi](location) with [chinese](cuisine)
+    - [moderate]{"entity": "budget", "value": "Rs 300 to 700"}[moderate](budget)
+    - [bengaluru]{"entity": "location", "value": "Bengaluru"}[bengaluru](location)
+    - [<300]{"entity": "budget", "value": "Lesser than Rs 300"}
+    - [>300]{"entity": "budget", "value": "Rs 300 to 700"}
+    - [>700]{"entity": "budget", "value": "More than 700"}
+    - low(budget)
+    - I’m hungry. Looking out for some good [chinese](cuisine) restaurants in [chandigarh](location)
+    - in [mubaim]{"entity": "location", "value": "Mumbai"}
+    - I’m hungry. Looking out for some good restaurants
+    - [American](cuisine) [American](cuisine)
+    - Can you suggest some good restaurants in [kolkata](location) [kolkata](location)
+    - I’ll prefer [chines](cuisine)
+    - Can you suggest some good restaurants in [Rishikesh](location) [Rishikesh](location)
+    - find me a [chinese](cuisine) [chinese](cuisine) restaurant in [delhi](location) [delhi](location)
+    - [ahmedabad](location)
+    - [Jaipur](location) [Jaipur](location)
+    - Find me a restaurant
+    - order me dosa
+    - order me food
+    - Can you find restaurant in [bangalore](location) [bangalore](location) [bangalore](location)
+    - [Delhi](location)[Delhi](location)
+    - Which food should I try
+    - [Italy](location)
+    - [Bangalore](location)[Bangalore](location)
+    - Findbme a restaurant
+    - Help me find a restaurant
+    - Hyderabad
+    - [Mumbai](location)[Mumbai](location)
+    - Please find me a restaurant
+    - Food
+    - [Bhubaneswar](location) [bhubaneswar](location)
+    - Find me restaurant
+    - Show me a restaurant in [Indiranay](location)
+    - Find a hotel
+    - Please suggest a cuisine?
+    - [Bhiwadi](location)
+    - Find me a restaurant please
+    - [Pune](location) [Pune](location)
+    - I like food
+    - [Pune](location)
+    - Can you find restaurant in [bangalore](location) [bangalore](location)
+    - find me a restaurant in delhi with [chinese](cuisine) [chinese](cuisine) cuisine and send me summary to my email id i.e. [subratbehera94@gmail.com](email)[subratbehera94@gmail.com](email)
+    - [Ahmedabad](location)
+    - [Bengaluru](location)
+    - [Chennai](location)
+    - [Delhi](location)
+    - [Kolkata](location)
+    - [Agra](location)
+    - [Ajmer](location)
+    - [Aligarh](location)
+    - [Amravati](location)
+    - [Amritsar](location)
+    - [Asansol](location)
+    - [Aurangabad](location)
+    - [Bareilly](location)
+    - [Belgaum](location)
+    - [Bhavnagar](location)
+    - [Bhiwandi](location)
+    - [Bhopal](location)
+    - Bhubaneswar
+    - [Bikaner](location)
+    - [Bilaspur](location)
+    - [Bokaro Steel City](location)
+    - [Bokaro](location)
+    - [Chandigarh](location)
+    - [Coimbatore](location)
+    - [Cuttack](location)
+    - [Dehradun](location)
+    - [Dhanbad](location)
+    - [Bhilai](location)
+    - [Durgapur](location)
+    - [Dindigul](location)
+    - [Erode](location)
+    - [Faridabad](location)
+    - [Firozabad](location)
+    - [Ghaziabad](location)
+    - [Gorakhpur](location)
+    - [Gulbarga](location)
+    - [Guntur](location)
+    - [Gwalior](location)
+    - [Gurgaon](location)
+    - [Guwahati](location)
+    - [Hamirpur](location)
+    - [Hubli–Dharwad](location)
+    - [Dharwad](location)
+    - [Indore](location)
+    - [Jabalpur](location)
+    - [Jaipur](location)
+    - [Jalandhar](location)
+    - [Jammu](location)
+    - [Jamnagar](location)
+    - [Jamshedpur](location)
+    - [Jhansi](location)
+    - [Jodhpur](location)
+    - [Kakinada](location)
+    - [Kannur](location)
+    - [Kanpur](location)
+    - [Karnal](location)
+    - [Kochi](location)
+    - [Kolhapur](location)
+    - [Kollam](location)
+    - [Kozhikode](location)
+    - [Kurnool](location)
+    - [Ludhiana](location)
+    - [Lucknow](location)
+    - [Madurai](location)
+    - [Malappuram](location)
+    - [Mathura](location)
+    - [Mangalore](location)
+    - [Meerut](location)
+    - [Moradabad](location)
+    - [Mysore](location)
+    - [Nagpur](location)
+    - [Nanded](location)
+    - [Nashik](location)
+    - [Nellore](location)
+    - [Noida](location)
+    - [Patna](location)
+    - [Pondicherry](location)
+    - [Purulia](location)
+    - [Prayagraj](location)
+    - [Raipur](location)
+    - [Rajkot](location)
+    - [Rajahmundry](location)
+    - [Ranchi](location)
+    - [Rourkela](location)
+    - [Salem](location)
+    - [Sangli](location)
+    - [Shimla](location)
+    - [Siliguri](location)
+    - [Solapur](location)
+    - [Srinagar](location)
+    - [Surat](location)
+    - [Thanjavur](location)
+    - [Thiruvananthapuram](location)
+    - [Thrissur](location)
+    - [Tiruchirappalli](location)
+    - [Tirunelveli](location)
+    - [Ujjain](location)
+    - [Bijapur](location)
+    - [Vadodara](location)
+    - [Varanasi](location)
+    - [Vasai-Virar City](location)
+    - [Vijayawada](location)
+    - [Visakhapatnam](location)
+    - [Vellore](location)
+    - [Warangal](location)
+    - order me [dosa](cuisine) with icecream.
+    - my location
+    - restro
+    - hotel
+    - motel
+    - Hotel
+    - Motel
+    - best and [cheap]{"entity": "budget", "value": "Lesser than Rs 300"} restaurant
+    - [Lesser than Rs 300](budget) [Lesser than Rs 300](budget)
+    - [Rs 300 to 700](budget) [Rs 300 to 700](budget)
+    - Can you find restaurant in [bangalore](location)
+    - [More than 700](budget) [More than 700](budget)
+    - [Mexican](cuisine)
+    - [Bangalore](location)
+    - [Neemrana](location)
+    - [Rs 300 to 700](budget)
+    - I would like to have my lunch in [mumbai](location)
+    - I'm hungry. Looking out for some good restaurants
+    - [bangalore](location)
+    - Can you suggest me some good restaurants in [kolkata](location)
+    - I'm hungry, looking out for some restaurant
+    - bombei
+    - [bombei](location)
+    - in [Mumbai](location)
+    - I am hungry, looking out for some [chinese]{"entity": "cuisine", "value": "Chinese"} restaurant in [chandigarh](location)
+    - find me a restaurant in [delhi](location)
+    - I am very hungry, find me some good [chinese]{"entity": "cuisine", "value": "Chinese"} restaurants
+    - [rishikesh](location)
+    - help me finding near by restaurant
+    - [nainital](location)
+    - restaurant
+    - [goa](location)
+    - [indore](location)
+    - I will prefer [chinese]{"entity": "cuisine", "value": "Chinese"}[chinese](cuisine)
+    - Please find me a restaurant in [delhi](location)
+    - Find me a restaurant in delhi with [Chinese](cuisine) restaurant
+    - Find me a restaurant nearby me
+    - Hi Foodie
+    - I am very hungry, show me some [chinese]{"entity": "cuisine", "value": "Chinese"}[chinese](cuisine) restaurants
+    - Can you suggest some good restaurants in [Rishikesh](location)
+    - [less](budget)[less than rs 300](budget)
+    - find me a restaurant in delhi with [chinese](cuisine)[chinese](cuisine) cuisine
+    - [Lesser than Rs. 300](budget)
+    - [jaipur](location)
+    - Restaurant
+    - [chinese](cuisine)[chinese](cuisine)
+    - find me a restaurant in [delhi](location) with [chinese](cuisine) cuisine and send me summary to my email id i.e. [subratbehera94@gmail.com](email)
+    - [vasai]{"entity": "location", "value": "Vasai-Virar City"}
+    - [gujarat](location)
+    - [vadodra](location)
+    - [gujrat](location)
+    - find me a restaurant in [gurugram]{"entity": "location", "value": "Gurgaon"} with [chinese]{"entity": "cuisine", "value": "Chinese"} cuisine
+    - hi, find me a [chinese]{"entity": "cuisine", "value": "Chinese"} restaurange in [udaipur](location)
+    - find me [american](cuisine) restaurant in [jaipur](location)
+    - find me a restaurant in [chennai](location) with [chinese]{"entity": "cuisine", "value": "Chinese"} cuisine
+    - [More than 700](budget)
+    - find me a [chinese]{"entity": "cuisine", "value": "Chinese"} restaurant in [delhi](location) with [low]{"entity": "budget", "value": "Lesser than Rs 300"} budget and send me email to [subratbehera94@gmail.com](email)
+    - [chinese]{"entity": "cuisine", "value": "Chinese"} cuisine
+    - [vizag]{"entity": "location", "value": "Visakhapatnam"}
+    - [chatfoodie@gmail.com](email)
+    - get me some restaurants in [nellore](location)
+    - [between 300 and 700]{"entity": "budget", "value": "Rs 300 to 700"}
+    - [moderate]{"entity": "budget", "value": "Rs 300 to 700"} restaurant budget
+    - [prayagraj](location)
+    - I would like to have [mexican](cuisine)
+    - hi, find me [medium]{"entity": "budget", "value": "Rs 300 to 700"} budget hotel
+    - [trivandrum]{"entity": "location", "value": "Thiruvananthapuram"}
+    - find me a [cheaper]{"entity": "budget", "value": "Lesser than Rs 300"} restaurant
+    - find me a [cheap]{"entity": "budget", "value": "Lesser than Rs 300"} restaurant
+    - find me a [<300]{"entity": "budget", "value": "Lesser than Rs 300"} restaurant
+    - find me a [medium]{"entity": "budget", "value": "Rs 300 to 700"} restaurant
+    - find me a [mid range]{"entity": "budget", "value": "Rs 300 to 700"} restaurant
+    - find me a [>300]{"entity": "budget", "value": "Rs 300 to 700"} restaurant
+    - find me a [expensive]{"entity": "budget", "value": "More than 700"} restaurant
+    - find me a [>700]{"entity": "budget", "value": "More than 700"} restaurant
+    - find me a [high]{"entity": "budget", "value": "More than 700"} budget restaurant
+    - I am looking around [nanded](location)
+    - I would prefer [south indian]{"entity": "cuisine", "value": "South Indian"} cuisine
+    - find me a [low]{"entity": "budget", "value": "Lesser than Rs 300"} budget restaurant
+    - find near by [gurgaon](location)
+    - [expensive]{"entity": "budget", "value": "More than 700"} cuisines
+    - i would like to have [mexican](cuisine)
+    - i'm hungry. looking out for some good restaurantd in [chandigarh](location)
+    - find me a [chinese]{"entity": "cuisine", "value": "Chinese"} cuisine in [delhi](location) with [low]{"entity": "budget", "value": "Lesser than Rs 300"} budget
+    - [south indan]{"entity": "cuisine", "value": "South Indian"} cuisine
+    - [firozabad](location)
+    - [southindian]{"entity": "cuisine", "value": "South Indian"}
+    - [northindian]{"entity": "cuisine", "value": "North Indian"}
+    - [abu](location) [dhabi](location)
+    - [maldieves](location)
+    - [pune](location)
+    - I want [northindian]{"entity": "cuisine", "value": "North Indian"} restaurants in [meghalaya](location) and send me restaurants to [restaurants@zomzato.co.in](email) [under 300]{"entity": "budget", "value": "Lesser than 300"} budget
+    - [jammu](location)
+    - I would like to have [expensive]{"entity": "budget", "value": "More than 700"} [mexican](cuisine) food in [rajgarh](location)
+    - [bhilai](location)
+    - [between 300 and 700]{"entity": "budget", "value": "Rs 300 to 700"} will be ok
+    - find me an [american](cuisine) cuisine in [hyderabad](location)
+    - I'm hungry. Looking out for some good [chinese]{"entity": "cuisine", "value": "Chinese"} restaurants in [chandigarh](location)
+    - Can you suggest some good restaurants in [Rishikesh](location)
+    - Ok, show me some in [allahbad]{"entity": "location", "value": "prayagraj"}
+    - I'll prefer [chines]{"entity": "cuisine", "value": "Chinese"}
+    - [>700]{"entity": "budget", "value": "More than 700"}
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - good bye
+    - stop
+    - end
+    - farewell
+    - Bye bye
+    - have a good one
+    - \stop
+    - no, thanks
+    - No, Thanks
+    - no. thanks
+    - Bye
+    - no
+    - No
+    - Thank u
+    - See you
+    - No, thanks
+    - No, thanks for asking.
+- intent: greet
+  examples: |
+    - hey
+    - howdy
+    - hey there
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - dear sir
+    - hola
+    - Hola
+    - Hello!
+    - Hello
+    - Hi
+    - Hey
+    - Hola!
+    - Namastey
+    - namastey
+    - vannakam
+    - namaskaar
+    - namaskaaram
+    - hola, como estas!
+    - hello, how are you
+    - Vanakkam
+    - hello!
+- intent: send_email
+  examples: |
+    - Yes send me email
+    - email
+    - Email
+    - email ID
+    - Email ID
+    - send me email with restaurants
+    - yes, send
+    - Yes, please :)
+    - send me email to [xyz@email.com](email)
+    - email me at [xyz@email.com](email)
+    - [xyz@email.com](email)
+    - this is my email id [xyz@email.com](email)
+    - send me email at [subratbehera94@gmail.com](email)
+    - [subratbehera94@gmail.com](email)[subratbehera94@gmail.com](email)
+    - yes, send me email at [subratbehera94@gmail.com](email)
+    - yes send me email
+    - sure, it's [subratbehera94@gmail.com](email)[subratbehera94@gmail.com](email)
+    - this is my email id [subratbehera94@gmail.com](email)[subratbehera94@gmail.com](email)
+    - yes. Please
+    - here is my email id [subratbehera94@gmail.com](email)[subratbehera94@gmail.com](email)
+    - Please, send me restaurants to my email id i.e. [sxyz@gmail.com](email)
+    - send me summary
+    - yes, send me summary
+    - Yes, send me summary
+    - Sure
+    - Send me email
+    - mail me restaurants
+    - Yes, send me restaurants to my email id
+    - send me restaurants
+    - send me email to [subratbehera94@gmail.com](email)[subratbehera94@gmail.com](email)
+    - Yes, Please send it to [subratbehera94@gmail.com](email)[subratbehera94@gmail.com](email)
+    - [subratbehera94@gmail.com](email)
+    - here is my email id [subratbehera94@gmail.com](email)
+    - Yes, send me restaurant to my email id
+    - It's [subratbehera94@gmail.com](email)
+    - [appuram1996@gmail.com](email)[appuram1996@gmail.com](email)
+    - yes
+    - [example@internet.co.in](email)
+    - send all the restaurants to [verygood@verygood123.com](email)
+    - send me to [abc1234@xyz.com](email)
+    - [jdkk.2jmd@kdl.co.in](email)
+    - [ssk@yahho.co.in](email)
+    - [subrat@gmail.co.in](email)
+    - send all the details to [sbc@abc.in](email)
+    - It will be much helpful if you send it to me to this address i.e [demo@xyzemail.com](email)
+    - yes, Please send it to [xyz@sth.edu](email)
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - i dont know
+    - idk
+    - why
+    - what
+    - What can you do?
+    - Why am I here?
+    - Who are you?
+    - Why
+    - Find me a phone
+    - Jaha
+    - what can you do
+    - what are you
+    - who are you
+    - So what?
+    - Happp
+    - Bataun abhi
+    - I like good e
+- synonym: Bengaluru
+  examples: |
+    - Bangalore
+    - bangalore
+    - bengaluru
+    - begaluru
+- synonym: Chinese
+  examples: |
+    - chines
+    - chinese
+    - Chines
+- synonym: Delhi
+  examples: |
+    - New Delhi
+    - dlehi
+    - delli
+    - Delhi NCR
+    - delhi ncr
+- synonym: Rs 300 to 700
+  examples: |
+    - moderate
+    - >300
+    - between 300 and 700
+    - medium
+    - mid range
+    - between 300 & 700
+    - mid
+    - between 300-700
+    - 300-700
+    - bw 300 and 700
+    - bw 300 & 700
+    - btw 300-700
+    - not high not low
+    - >300 and <700
+    - 300 - 700 range
+    - 300-700 range
+    - 300- 700 range
+    - 300 -700 range
+    - <700
+- synonym: South Indian
+  examples: |
+    - south indian
+    - south indan
+    - southindian
+    - dosa
+    - saambhar
+    - idli
+    - uttapam
+- synonym: Lesser than Rs 300
+  examples: |
+    - <300
+    - cheap
+    - low
+    - cheaper
+    - lesser 300
+    - Rs 300 lower
+    - less than 300
+    - lower 300
+    - lesser
+    - low range cuisine
+    - cheaper rate
+    - 300 or less
+    - less
+    - lower
+    - less than rs 300
+    - Lesser than Rs. 300
+- synonym: More than 700
+  examples: |
+    - >700
+    - expensive
+    - high
+    - mt 700
+    - greater than 700
+    - 700+
+    - Rs 700+
+    - higher
+    - more
+    - deluxe
+    - family pack
+    - family meal
+- synonym: Mumbai
+  examples: |
+    - mubaim
+    - mumbei
+    - bombay
+- synonym: Vasai-Virar City
+  examples: |
+    - vasai
+    - Vasai
+- synonym: Gurgaon
+  examples: |
+    - gurugram
+    - Gurugram
+- synonym: Visakhapatnam
+  examples: |
+    - vizag
+    - visakhapatnam
+- synonym: Thiruvananthapuram
+  examples: |
+    - trivandrum
+    - Trivandrum
+    - tiruvantapuram
+- synonym: North Indian
+  examples: |
+    - northindian
+- synonym: Lesser than 300
+  examples: |
+    - under 300
+- synonym: Prayagraj
+  examples: |
+    - allahabad
+    - ellahbad
+    - Allahabad
+- synonym: Vellore
+  examples: |
+    - velore
+    - velre
+    - vellore
+- synonym: Kolkata
+  examples: |
+    - calcutta
+    - kalikata
+    - culcuta
+    - kol kata
+    - culcutta
+- synonym: I'll
+  examples: |
+    - I will
+    - i will
+- synonym: vegetarian
+  examples: |
+    - veggie
+    - vegg
+    - veg
+- regex: email
+  examples: |
+    - ^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$
+    - ^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2}[.]\w{2,3}$
+    - ^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2}[.]\w{2,3}[.]\w{2,3}$
+- regex: greet
+  examples: |
+    - hell[^\s]*
+    - hey[^\s]*
+    - hola[^\s]*
+- regex: pincode
+  examples: |
+    - [0-9]{6}

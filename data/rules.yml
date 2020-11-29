@@ -1,0 +1,307 @@
+version: "2.0"
+stories:
+- story: Story from Conversation ID ba34693946614797b32e822130e7fa5d
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - slot_was_set:
+    - cuisine: chinese
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - cuisine: chinese
+  - action: utter_ask_budget
+  - slot_was_set:
+    - budget: moderate
+  - intent: restaurant_search
+    entities:
+    - budget: Rs. 300 to 700
+    - budget: moderate
+  - action: utter_ask_location
+  - slot_was_set:
+    - location: delhi
+  - intent: restaurant_search
+    entities:
+    - location: delhi
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: delhi
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - intent: affirm
+  - action: utter_goodbye
+- story: Story from Conversation ID 3a059146c17b4d22b06aa14eb1d7ce65
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - slot_was_set:
+    - location: bengaluru
+  - intent: affirm
+    entities:
+    - location: bengaluru
+  - action: utter_ask_cuisine
+  - slot_was_set:
+    - cuisine: Thai
+  - intent: restaurant_search
+    entities:
+    - cuisine: Thai
+    - cuisine: Thai
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: bengaluru
+  - action: utter_ask_budget
+  - slot_was_set:
+    - budget: 300 to 700
+  - intent: restaurant_search
+    entities:
+    - budget: Rs
+    - budget: 300 to 700
+    - budget: Rs
+    - budget: 300 to 700
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: bengaluru
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+- story: Story from Conversation ID c54fae31f70a452baff99d1b255473f1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - slot_was_set:
+    - location: Rishikesh
+  - intent: restaurant_search
+    entities:
+    - location: Rishikesh
+    - location: Rishikesh
+  - action: utter_ask_cuisine
+  - slot_was_set:
+    - cuisine: chines
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - cuisine: chines
+  - action: utter_ask_budget
+  - slot_was_set:
+    - budget: More than 700
+  - intent: restaurant_search
+    entities:
+    - budget: More than 700
+    - budget: More than 700
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: Rishikesh
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+- story: Story from Conversation ID fda9c06fef0c4e8f8f71d029b3fea30b
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - slot_was_set:
+    - location: kolkata
+  - intent: restaurant_search
+    entities:
+    - location: kolkata
+    - location: kolkata
+  - action: utter_ask_cuisine
+  - intent: restaurant_search
+    entities:
+    - cuisine: American
+    - cuisine: American
+  - slot_was_set:
+    - cuisine: American
+  - action: utter_ask_budget
+  - slot_was_set:
+    - budget: '300'
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs
+    - budget: '300'
+    - budget: Lesser than Rs
+    - budget: '300'
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: kolkata
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+- story: Story from Conversation ID e31b4e6f1ef542cc9a6d6d41916bb6fb
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - slot_was_set:
+    - location: mubaim
+  - intent: restaurant_search
+    entities:
+    - location: mubaim
+    - location: mubaim
+  - action: utter_ask_cuisine
+  - slot_was_set:
+    - cuisine: american
+  - intent: restaurant_search
+    entities:
+    - cuisine: american
+    - cuisine: american
+  - action: action_search_restaurants
+  - action: utter_ask_budget
+  - slot_was_set:
+    - budget: '300'
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs
+    - budget: '300'
+    - budget: Lesser than Rs
+    - budget: '300'
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+- story: Story from Conversation ID 9df058854ca44e12b844846d69c428aa
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - slot_was_set:
+    - cuisine: chinese
+  - intent: restaurant_search
+    entities:
+    - cuisine: chinese
+    - location: chandigarh
+    - cuisine: chinese
+    - location: chandigarh
+  - action: utter_ask_budget
+  - slot_was_set:
+    - budget: <300
+  - intent: restaurant_search
+    entities:
+    - budget: <300
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: chandigarh
+  - action: utter_send_summary
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID 35641efb72c14ff693cfcc24891c314b
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: restaurant_search
+  - action: utter_ask_location
+  - slot_was_set:
+    - location: delhi
+  - intent: restaurant_search
+    entities:
+    - location: delhi
+  - action: action_valid_location
+  - slot_was_set:
+    - location: delhi
+  - action: utter_ask_cuisine
+  - slot_was_set:
+    - cuisine: South Indian
+  - intent: restaurant_search
+    entities:
+    - cuisine: South Indian
+  - action: utter_ask_budget
+  - slot_was_set:
+    - budget: Lesser than Rs 300
+  - intent: restaurant_search
+    entities:
+    - budget: Lesser than Rs 300
+  - action: action_search_restaurants
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - action: utter_goodbye
+  - intent: affirm
+  - action: utter_goodbye
+- story: Story from Conversation ID 36a3f1dc8e4f40219bc62a733a4a5870
+  steps:
+  - action: utter_greet
+  - intent: greet
+  - slot_was_set:
+    - location: gujrat
+  - intent: restaurant_search
+  - action: action_valid_location
+  - slot_was_set:
+    - location: null
+  - intent: restaurant_search
+    entities:
+    - location: gujarat
+  - action: action_valid_location
+  - slot_was_set:
+    - location: Vasai-Virar City
+  - intent: restaurant_search
+    entities:
+    - location: Vasai-Virar City
+  - action: action_search_restaurants
+  - slot_was_set:
+    - location: gujrat
+  - intent: restaurant_search
+    entities:
+    - budget: Rs 300 to 700
+  - action: utter_send_summary
+  - intent: send_email
+  - action: utter_ask_email_id
+  - slot_was_set:
+    - email: subratbehera94@gmail.com
+  - intent: send_email
+    entities:
+    - email: subratbehera94@gmail.com
+  - action: action_send_email
+  - intent: affirm
+  - action: utter_goodbye
+rules:
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_default
